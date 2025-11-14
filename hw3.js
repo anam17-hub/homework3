@@ -19,6 +19,54 @@ output.innerHTML = slider.value;
 
 slider.oninput = function () {output.innerHTML = this.value;};
 
+//first name validation js code 
+function validateFname(){
+    fname=document.getElementById("fname").value.trim();
+    var namePattern=/^[a-zA-Z'-]+$/;
+    //checks if first name field is empty
+    if (fname==""){
+        document.getElementById("fname-error").innerHTML="First name field cannot be left blank.";
+        return false;
+    } else if (!fname.match(namePattern)) { // checks if first name matches pattern
+        document.getElementById("fname-error").innerHTML="Letters,apostrophes, and dashes only."
+        return false;
+    }else if (fname.length <2){ //checks if name is at least 1 character
+        document.getElementById("fname-error").innerHTML="First name cannot be shorter than 2 characters.";
+        return false;
+    }else if (fname.length > 30){ //checks if name is more than 30 characters
+        document.getElementById("fname-error").innerHTML= "First name cannot be longer than 30 characters.";
+        return false;
+    }else {
+        document.getElementById("fname-error").innerHTML="";
+        return true;
+    }
+        
+}
+
+//last name validation js code 
+function validateFname(){
+    lname=document.getElementById("lname").value.trim();
+    var namePattern=/^[a-zA-Z'-]+$/;
+    //checks if last name field is empty
+    if (lname==""){
+        document.getElementById("lname-error").innerHTML="Last name field cannot be left blank.";
+        return false;
+    } else if (!lname.match(namePattern)) { // checks if last name matches pattern
+        document.getElementById("lname-error").innerHTML="Letters,apostrophes, and dashes only."
+        return false;
+    }else if (lname.length <2){ //checks if name is at least 1 character
+        document.getElementById("lname-error").innerHTML="Last name cannot be shorter than 2 characters.";
+        return false;
+    }else if (lname.length > 30){ //checks if name is more than 30 characters
+        document.getElementById("lname-error").innerHTML= "Last name cannot be longer than 30 characters.";
+        return false;
+    }else {
+        document.getElementById("lname-error").innerHTML="";
+        return true;
+    }
+        
+}
+
 // dob validation js code
 function validateDob(){
     dob=document.getElementById("dob");
