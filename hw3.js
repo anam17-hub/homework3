@@ -43,6 +43,28 @@ function validateFname(){
         
 }
 
+//middle initial validation js code 
+function validateMini(){
+    mini=document.getElementById("mini").value;
+    var namePattern=/^[A-Z]+$/;
+
+    //makes middile initial uppercase letter
+    mini=mini.toUpperCase();
+    document.getElementById("mini").value=mini;
+
+    //checks that middle initial is 1 character
+    if (mini.length>1){
+        document.getElementById("mini-error").innerHTML="Middle initial cannot hace mor ethan 1 character.";
+        return false;
+    } else if (!mini.match(namePattern)) { // checks if middle initial matches pattern
+        document.getElementById("mini-error").innerHTML="Letters only."
+        return false;
+    }else {
+        document.getElementById("fname-error").innerHTML="";
+        return true;
+    }        
+}
+
 //last name validation js code 
 function validateFname(){
     lname=document.getElementById("lname").value.trim();
