@@ -27,7 +27,8 @@ function validateFname(){
     if (fname==""){
         document.getElementById("fname-error").innerHTML="First name field cannot be left blank.";
         return false;
-    } else if (!fname.match(namePattern)) { // checks if first name matches pattern
+    } else if (fname!=""){
+     if (!fname.match(namePattern)) { // checks if first name matches pattern
         document.getElementById("fname-error").innerHTML="Letters,apostrophes, and dashes only."
         return false;
     }else if (fname.length <2){ //checks if name is at least 1 character
@@ -39,8 +40,8 @@ function validateFname(){
     }else {
         document.getElementById("fname-error").innerHTML="";
         return true;
-    }
-        
+    }      
+}
 }
 
 //middle initial validation js code 
@@ -53,11 +54,8 @@ function validateMini(){
     document.getElementById("mini").value=mini;
 
     //checks that middle initial is 1 character
-    if (mini.length>1){
-        document.getElementById("mini-error").innerHTML="Middle initial cannot hace mor ethan 1 character.";
-        return false;
-    } else if (!mini.match(namePattern)) { // checks if middle initial matches pattern
-        document.getElementById("mini-error").innerHTML="Letters only."
+    }if (!mini.match(namePattern)) { 
+        document.getElementById("mini-error").innerHTML="Middle initial has to be a single uppercase letter.";
         return false;
     }else {
         document.getElementById("fname-error").innerHTML="";
@@ -73,7 +71,8 @@ function validateFname(){
     if (lname==""){
         document.getElementById("lname-error").innerHTML="Last name field cannot be left blank.";
         return false;
-    } else if (!lname.match(namePattern)) { // checks if last name matches pattern
+    } else if (lname!=""){
+     if (!lname.match(namePattern)) { // checks if last name matches pattern
         document.getElementById("lname-error").innerHTML="Letters,apostrophes, and dashes only."
         return false;
     }else if (lname.length <2){ //checks if name is at least 1 character
@@ -88,7 +87,7 @@ function validateFname(){
     }
         
 }
-
+}
 // dob validation js code
 function validateDob(){
     dob=document.getElementById("dob");
