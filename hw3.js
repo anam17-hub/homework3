@@ -140,6 +140,19 @@ function validateAddressline1(){
         return true;
     }
 }
+
+// city validate js code 
+function validateCity(){
+    city=document.getElementById("city").value.trim();
+if (!city) {
+    document.getElementById("city-error").innerHTML= "City cannot be left empty.";
+    return false;
+} else {
+document.getElementById("city-error").innerHTML= "";
+    return false;
+}
+}
+
 //zip code validation js code 
 function validateZcode() {
     const zipInput= document.getElementById("zcode");
