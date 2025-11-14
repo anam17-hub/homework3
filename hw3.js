@@ -54,17 +54,17 @@ function validateMini(){
     document.getElementById("mini").value=mini;
 
     //checks that middle initial is 1 character
-    }if (!mini.match(namePattern)) { 
+    if (!mini.match(namePattern)) { 
         document.getElementById("mini-error").innerHTML="Middle initial has to be a single uppercase letter.";
         return false;
     }else {
-        document.getElementById("fname-error").innerHTML="";
+        document.getElementById("mini-error").innerHTML="";
         return true;
     }        
 }
 
 //last name validation js code 
-function validateFname(){
+function validateLname(){
     lname=document.getElementById("lname").value.trim();
     var namePattern=/^[a-zA-Z'-]+$/;
     //checks if last name field is empty
