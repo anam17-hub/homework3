@@ -149,7 +149,7 @@ if (!city) {
     return false;
 } else {
 document.getElementById("city-error").innerHTML= "";
-    return false;
+    return true;
 }
 }
 
