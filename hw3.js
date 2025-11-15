@@ -349,6 +349,7 @@ function validatePassword(){
      function showAlert(){
         var alertBox= document.getElementById("alert-box");
         var closeAlert=document.getElementById("close-alert");
+        document.querySelector("#alert-content h4").innerHTML="All required information needs to be filled out.";
 
         alertBox.style.display ="block";
         closeAlert.onclick = function(){
@@ -402,6 +403,8 @@ if (!confirmPassword()){
 if (valid){
     document.getElementById("submit").disabled= false;
 }else {
+    document.getElementById("form-error").innerHTML="All required information needs to be filled out.";
+    document.getElementById("showInput").innerHTML=""; 
     showAlert();
 }
  }
