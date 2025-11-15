@@ -154,14 +154,13 @@ td.outputdata {
   background-color:white;
   border-radius:10px;
   width:300px;
-  height:100px;
+  height:135px;
   margin:auto;
   margin-top:20%;
   padding:30px;
   text-align:center;
 }
 #alert-content h4{
-  margin top: 20%;
   font-size:20px;
   text-align:center;
   font-family:"optima",sans-serif;
@@ -173,8 +172,8 @@ td.outputdata {
   background-color:white;
   border-width:1px;
   border-style:solid;
-  color:rgba(29, 86,166, 0.442);
-  border-color:rgba(29, 86,166, 0.442);
+  color:rgba(4, 78, 180, 0.881);
+  border-color:rgba(5, 58, 133, 0.871));
   font-size:15px;
   font-weight:bold;
   height:20px;
@@ -185,4 +184,4 @@ td.outputdata {
   margin-top:20px;
   text-align: center;
    font-family:"optima",sans-serif;
-  
+}
