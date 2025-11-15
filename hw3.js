@@ -345,18 +345,16 @@ function validatePassword(){
         document.getElementById("showInput").innerHTML= "";
      }
 
-     //shows alert box when necessary js code 
+     //shows alert box when necessary js code
      function showAlert(){
-        var alertBox= document.getElementById("alert-box");
-        var closeAlert=document.getElementById("close-alert");
-        document.querySelector("#alert-content h4").innerHTML="All required information needs to be filled out.";
+        var alertbox= document.getElementById("alert-box");
+        var closeAlert = document.getElementById("close-alert");
 
-        alertBox.style.display ="block";
-        closeAlert.onclick = function(){
-            alertBox.style.display= "none";
+        alertbox.style.display="block";
+        closeAlert.onclick= function(){
+            alertbox.style.display="none";
         }
      }
-
      //validate everything on form
      function validateEverything(){
 let valid=true;
@@ -401,11 +399,15 @@ if (!confirmPassword()){
     valid = false;
 }
 if (valid){
+    document.getElementById("form-error").disabled= "";
     document.getElementById("submit").disabled= false;
+    reviewInput();
+    return true;
 }else {
     document.getElementById("form-error").innerHTML="All required information needs to be filled out.";
     document.getElementById("showInput").innerHTML=""; 
     showAlert();
+    return false;
 }
  }
      
